@@ -1,0 +1,159 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{B7A0809E-3E92-4FD7-BDAA-493572CEE46A}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>RayTracer</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v110</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <LinkIncremental>true</LinkIncremental>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <LinkIncremental>false</LinkIncremental>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Becky\Documents\glut-3.7.6-bin\glut-3.7.6-bin</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>C:\Users\Becky\Documents\glut-3.7.6-bin\glut-3.7.6-bin</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glut32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_CONSOLE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <SDLCheck>true</SDLCheck>
+      <AdditionalIncludeDirectories>C:\Users\Becky\Documents\glut-3.7.6-bin\glut-3.7.6-bin</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Console</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalLibraryDirectories>C:\Users\Becky\Documents\glut-3.7.6-bin\glut-3.7.6-bin</AdditionalLibraryDirectories>
+      <AdditionalDependencies>glut32.lib;kernel32.lib;user32.lib;gdi32.lib;winspool.lib;comdlg32.lib;advapi32.lib;shell32.lib;ole32.lib;oleaut32.lib;uuid.lib;odbc32.lib;odbccp32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClCompile Include="BoundVH.cpp" />
+    <ClCompile Include="DielectricMaterial.cpp" />
+    <ClCompile Include="DiffSpecMaterial.cpp" />
+    <ClCompile Include="DiffuseMaterial.cpp" />
+    <ClCompile Include="Image.cpp" />
+    <ClCompile Include="Instance.cpp" />
+    <ClCompile Include="main.cpp" />
+    <ClCompile Include="MarbleTexture.cpp" />
+    <ClCompile Include="Matrix.cpp" />
+    <ClCompile Include="MeshTriangle.cpp" />
+    <ClCompile Include="NoiseTexture.cpp" />
+    <ClCompile Include="ONB.cpp" />
+    <ClCompile Include="OrthographicCamera.cpp" />
+    <ClCompile Include="Parallelogram.cpp" />
+    <ClCompile Include="PhongMetalMaterial.cpp" />
+    <ClCompile Include="Point3D.cpp" />
+    <ClCompile Include="PointLightSource.cpp" />
+    <ClCompile Include="Ray3D.cpp" />
+    <ClCompile Include="Sample.cpp" />
+    <ClCompile Include="Scene.cpp" />
+    <ClCompile Include="SolidNoise.cpp" />
+    <ClCompile Include="ImageTexture.cpp" />
+    <ClCompile Include="sphere.cpp" />
+    <ClCompile Include="TestMaterial.cpp" />
+    <ClCompile Include="Triangle.cpp" />
+    <ClCompile Include="UVSphere.cpp" />
+    <ClCompile Include="Vector3D.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="BBox.h" />
+    <ClInclude Include="BoundVH.h" />
+    <ClInclude Include="Camera.h" />
+    <ClInclude Include="ColorRGB.h" />
+    <ClInclude Include="DielectricMaterial.h" />
+    <ClInclude Include="DiffSpecMaterial.h" />
+    <ClInclude Include="DiffuseMaterial.h" />
+    <ClInclude Include="Frame.h" />
+    <ClInclude Include="Instance.h" />
+    <ClInclude Include="Matrix.h" />
+    <ClInclude Include="MeshTriangle.h" />
+    <ClInclude Include="Mesh.h" />
+    <ClInclude Include="Parallelogram.h" />
+    <ClInclude Include="PhongMetalMaterial.h" />
+    <ClInclude Include="qsplit.h" />
+    <ClInclude Include="TestMaterial.h" />
+    <ClInclude Include="UVSphere.h" />
+    <ClInclude Include="Image.h" />
+    <ClInclude Include="ImageTexture.h" />
+    <ClInclude Include="MarbleTexture.h" />
+    <ClInclude Include="Material.h" />
+    <ClInclude Include="NoiseTexture.h" />
+    <ClInclude Include="ONB.h" />
+    <ClInclude Include="OrthographicCamera.h" />
+    <ClInclude Include="Point3D.h" />
+    <ClInclude Include="PointLightSource.h" />
+    <ClInclude Include="Ray3D.h" />
+    <ClInclude Include="RNG.h" />
+    <ClInclude Include="Sample.h" />
+    <ClInclude Include="Scene.h" />
+    <ClInclude Include="Shape.h" />
+    <ClInclude Include="SimpleTexture.h" />
+    <ClInclude Include="SolidNoise.h" />
+    <ClInclude Include="sphere.h" />
+    <ClInclude Include="Texture.h" />
+    <ClInclude Include="Triangle.h" />
+    <ClInclude Include="Vector2D.h" />
+    <ClInclude Include="Vector3D.h" />
+    <ClInclude Include="Vertex.h" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
